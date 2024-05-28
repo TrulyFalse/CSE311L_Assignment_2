@@ -1,0 +1,59 @@
+h2, p{
+    text-align: center;
+}
+
+body{
+    background-color: #f4f4f4;
+    color: #000;
+    font-family: Arial, sans-serif;
+}
+
+div{
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    Margin: 50px auto;
+    Padding: 20px;
+}
+
+select{
+    border-color: #ccc;
+    border-radius: 3px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+input{
+    border-width: 1px;
+    border-color: #ccc;
+    border-radius: 3px;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+[type = "checkbox"]{
+    border-width: 1px;
+    border-color: #ccc;
+    border-radius: 3px;
+    width: 20px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+input.button{
+    width: 100%;
+    Background-Color: #4caf50;
+    Color: #fff;
+    Border-Radius: 3px;
+    padding: 10px;
+}
+
+a{
+    Color: #007bff;
+    Cursor: Pointer;
+}   

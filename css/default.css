@@ -1,5 +1,6 @@
 h2, p{
     text-align: center;
+    white-space: pre-line;
 }
 
 body{

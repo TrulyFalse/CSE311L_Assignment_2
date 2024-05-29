@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="./css_stylesheets/default.css">
+    <link rel="stylesheet" href="../css/default.css">
 </head>
 <body>
     <div>
         <h2>Registration Form</h2>
         <label for="fname">First name:</label><br>
+        <p id="fname_prompt" style="color: red" hidden></p>
         <input type="text" id="fname" name="fname"><br>
         <label for="lname">Last name:</label><br>
+        <p id="lname_prompt" style="color: red" hidden></p>
         <input type="text" id="lname" name="lname"><br>
         
         <label for="gender">Gender:</label><br>
+        <p id="gender_prompt" style="color: red" hidden></p>
         <select id="gender" name="gender">
             <option value="" disabled selected>Select Gender</option>
             <option value="Male">Male</option>
@@ -22,17 +25,23 @@
         </select><br>
 
         <label for="dob">Date of Birth:</label><br>
+        <p id="dob_prompt" style="color: red" hidden></p>
         <input type="date" id="dob" name="dob"><br>
         <label for="email">Email:</label><br>
+        <p id="email_prompt" style="color: red" hidden></p>
         <input type="text" id="email" name="email"><br>
         <label for="password">Password:</label><br>
+        <p id="password_prompt" style="color: red" hidden></p>
         <input type="password" id="password" name="password"><br>
-        <label for="retypePassword">Retype Password:</label><br>
-        <input type="password" id="retypePassword" name="retypePassword"><br>
-        <input type="submit" id="submitBtn" name="submitBtn" value="Register" class="button">
+        <label for="retype_password">Retype Password:</label><br>
+        <p id="retype_password_prompt" style="color: red" hidden></p>
+        <input type="password" id="retype_password" name="retype_password"><br>
+
+        <input type="submit" id="submitBtn" name="submitBtn" value="Register" class="button" onclick=validate_registration()>
         <p>Already have an account? <a href="loginPage.html">Login</a></p>
 
         
     </div>
+    <script src="../js/front/register.js"></script>
 </body>
 </html>

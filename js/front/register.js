@@ -1,6 +1,4 @@
 
-
-
 // DRY code
 function hide_element(element_id){
     document.getElementById(element_id).setAttribute("hidden", "true");
@@ -13,13 +11,22 @@ function unhide_element(element_id){
 // input validation function
 function validate_registration(){
 
-    check_first_name();
-    check_last_name();
-    check_gender();
-    check_dob();
-    check_email();
-    check_password();
-    check_retyped_password();
+    // the code line below is not suitable for validation though it is more efficient, because all of the functions will not execute after the first false is returned
+    //let valid_submission = check_first_name() && check_last_name() && check_gender() && check_dob() && check_email() && check_password() && check_retyped_password();
+
+    let valid_fname = check_first_name();
+    let valid_lname = check_last_name();
+    let valid_gender = check_gender();
+    let valid_dob = check_dob();
+    let valid_email = check_email();
+    let valid_password = check_password();
+    let valid_retyped_password = check_retyped_password();
+
+    let valid_submission = valid_fname && valid_lname && valid_gender && valid_dob && valid_email && valid_password && valid_retyped_password;
+
+    if(valid_submission){
+        window.location.href = "./profilePage.html";
+    }
 }
 
 

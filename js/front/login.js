@@ -38,7 +38,7 @@ function validate_login(){
         };
         console.log("data", login_data);
 
-        fetch("http://localhost:3000/login", {
+        fetch("http://localhost:3000/api/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(login_data),
@@ -47,6 +47,9 @@ function validate_login(){
             .then((res) => {
                 console.log("res:", res.result);
                 if (res.result && res.result.length > 0) {
+                    // saving the logged profile info in browser under the key named "profile" to retrive it in the profile page
+                    localStorage.setItem("profile", JSON.stringify(res.result[0]));
+
                     window.location.href = "profilePage.html";
                     alert("Logging in");
                 } else {

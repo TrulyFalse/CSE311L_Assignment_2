@@ -45,7 +45,7 @@ function validate_registration(){
         };
         console.log("data", profile_data);
 
-        fetch("http://localhost:3000/add-profile", {
+        fetch("http://localhost:3000/api/profile", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(profile_data),

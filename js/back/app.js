@@ -26,7 +26,55 @@ db_connection.connect(
 
 // endpoints for CRUD APIs
 // Create API's endpoint
-app.post('/add-profile', function (req, res) {
+app.get('/api/profile', function(req, res){
+    email = req.query.email;
+    const query =  `SELECT p.first_name, p.last_name, p.gender, p.dob, p.email
+                    FROM profile p
+                    WHERE p.email = "${email}";`;
+
+    db_connection.query(query, function(err, result){
+        if(err){
+            console.log(err);
+            res.json({error: err},);
+        } else {
+            res.json({result: result[0],});
+        }
+    });
+    
+});
+
+
+app.put('/api/update', function(req, res){
+    const profile = {
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        gender: req.body.gender,
+        dob: req.body.dob,
+        email: req.body.email,
+        old_email: req.body.old_email,
+        pfp: req.body.pfp
+    };
+
+    const query =  `UPDATE profile
+                    SET first_name = '${profile.first_name}', 
+                    last_name = '${profile.last_name}', 
+                    gender = '${profile.gender}', 
+                    dob = '${profile.dob}', 
+                    email = '${profile.email}', 
+                    pfp = '${profile.pfp}'
+                    WHERE email = '${profile.old_email}';`;
+
+    db_connection.query(query, function(err, result){
+        if(err){
+            res.json({error: err,});
+        } else {
+            console.log(result);
+            res.json({result: result,});
+        }
+    });
+})
+
+app.post('/api/profile', function (req, res) {
 
     const profile = {
         first_name: req.body.first_name,
@@ -60,7 +108,7 @@ app.post('/add-profile', function (req, res) {
 })
 
 // Read API's endpoint
-app.post("/login", function(req, res){
+app.post("/api/login", function(req, res){
     let login = {
         email: req.body.email,
         password: req.body.password

@@ -46,7 +46,7 @@ input{
     margin-bottom: 15px;
 }
 
-input.button{
+input.button, button{
     width: 100%;
     Background-Color: #4caf50;
     Color: #fff;

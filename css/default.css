@@ -77,3 +77,19 @@ input.success, select.success{
     border-color: greenyellow;
     border-width: 3px;
 }
+
+input.disabled_button{
+    width: 100%;
+    Background-Color: #4c4c4c;
+    Color: #fff;
+    Border-Radius: 3px;
+    padding: 10px;
+}
+
+button.toggled{
+    width: 100%;
+    Background-Color: #991414;
+    Color: #fff;
+    Border-Radius: 3px;
+    padding: 10px;
+}

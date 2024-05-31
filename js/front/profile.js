@@ -49,7 +49,12 @@ function edit_fields(){
         document.getElementById("gender").setAttribute("disabled", "");
         document.getElementById("dob").setAttribute("disabled", "");
         document.getElementById("email").setAttribute("disabled", "");
+
         document.getElementById("submit_btn").setAttribute("disabled", "");
+        document.getElementById("submit_btn").setAttribute("class", "disabled_button");
+
+        document.getElementById("edit_btn").innerHTML = "Enable Edit";
+        document.getElementById("edit_btn").removeAttribute("class");
     } else {
         document.getElementById("pfp").removeAttribute("disabled");
         document.getElementById("fname").removeAttribute("disabled");
@@ -57,7 +62,12 @@ function edit_fields(){
         document.getElementById("gender").removeAttribute("disabled");
         document.getElementById("dob").removeAttribute("disabled");
         document.getElementById("email").removeAttribute("disabled");
+
         document.getElementById("submit_btn").removeAttribute("disabled");
+        document.getElementById("submit_btn").setAttribute("class", "button");
+
+        document.getElementById("edit_btn").setAttribute("class", "toggled");
+        document.getElementById("edit_btn").innerHTML = "Disable Edit";
     }
 }
 

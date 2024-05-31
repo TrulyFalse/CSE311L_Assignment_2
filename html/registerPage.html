@@ -9,35 +9,45 @@
 <body>
     <div>
         <h2>Registration Form</h2>
-        <label for="fname">First name:</label><br>
-        <p id="fname_prompt" style="color: red" hidden></p>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Last name:</label><br>
-        <p id="lname_prompt" style="color: red" hidden></p>
-        <input type="text" id="lname" name="lname"><br>
-        
-        <label for="gender">Gender:</label><br>
-        <p id="gender_prompt" style="color: red" hidden></p>
-        <select id="gender" name="gender">
-            <option value="" disabled selected>Select Gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-        </select><br>
+        <form id="registration_form" action="loginPage.html">
+            <label for="pfp">Profile Image:</label>
+            <input type="file" id="pfp" name="pfp" accept=".png,.jpg,.jpeg"><br>
+            <p id="pfp_prompt" class="prompt" hidden></p>
 
-        <label for="dob">Date of Birth:</label><br>
-        <p id="dob_prompt" style="color: red" hidden></p>
-        <input type="date" id="dob" name="dob"><br>
-        <label for="email">Email:</label><br>
-        <p id="email_prompt" style="color: red" hidden></p>
-        <input type="text" id="email" name="email"><br>
-        <label for="password">Password:</label><br>
-        <p id="password_prompt" style="color: red" hidden></p>
-        <input type="password" id="password" name="password"><br>
-        <label for="retype_password">Retype Password:</label><br>
-        <p id="retype_password_prompt" style="color: red" hidden></p>
-        <input type="password" id="retype_password" name="retype_password"><br>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <p id="fname_prompt" class="prompt" hidden></p>
 
-        <input type="submit" id="submitBtn" name="submitBtn" value="Register" class="button" onclick=validate_registration()>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <p id="lname_prompt" class="prompt" hidden></p>
+            
+            <label for="gender">Gender:</label><br>
+            <select id="gender" name="gender">
+                <option value="" disabled selected>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br>
+            <p id="gender_prompt" class="prompt" hidden></p>
+
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" id="dob" name="dob"><br>
+            <p id="dob_prompt" class="prompt" hidden></p>
+
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <p id="email_prompt" class="prompt" hidden></p>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br>
+            <p id="password_prompt" class="prompt" hidden></p>
+
+            <label for="retype_password">Retype Password:</label><br>
+            <input type="password" id="retype_password" name="retype_password"><br>
+            <p id="retype_password_prompt" class="prompt" hidden></p>
+
+            <input type="submit" id="submit_btn" name="submit_btn" value="register" class="button">
+        </form>
         <p>Already have an account? <a href="loginPage.html">Login</a></p>
 
         

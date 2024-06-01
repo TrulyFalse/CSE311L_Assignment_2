@@ -71,6 +71,35 @@ function edit_fields(){
     }
 }
 
+function delete_profile(){
+    if (confirm('Are you sure you want to DELETE this profile?')) {
+        profile = JSON.parse(localStorage.getItem("profile"));
+        fetch("http://localhost:3000/api/profile", {
+            method: "DELETE",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(profile),
+        })
+            .then((res) => res.json())
+            .then((res) => {
+            console.log("res", res.result);
+            if (res.result) {
+                alert("Profile deleted successfully.");
+            } else {
+                alert("Profile not deleted: " + res.error.sqlMessage);
+            }
+            }).then(() => {
+                localStorage.removeItem("profile");
+                window.location.href = "loginPage.html";
+            });
+      } else {
+        console.log('Delete operation aborted');
+      }
+}
+
+function logout_profile(){
+    window.location.replace("loginPage.html");
+}
+
 
 let profile_form = document.getElementById("profile_form");
 profile_form.addEventListener("submit", function(event){

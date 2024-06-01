@@ -132,6 +132,22 @@ app.post("/api/login", function(req, res){
 })
 
 
+app.delete("/api/profile", function(req, res){
+    const query = `DELETE FROM profile
+                    WHERE email = '${req.body.email}';`;
+
+    db_connection.query(query, function(err, result){
+        if(err){
+            console.log(err);
+            res.json({error: err,});
+        } else {
+            console.log(result);
+            res.json({result: result});
+        }
+    });
+})
+
+
 // starting server
 app.listen(port, 
     function(){

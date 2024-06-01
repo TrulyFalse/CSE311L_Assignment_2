@@ -2,6 +2,8 @@
 
 CREATE DATABASE cse311l_assignment2_db;
 
+USE cse311l_assignment2_db;
+
 CREATE TABLE profile(
     profile_ID int AUTO_INCREMENT,
     first_name varchar(20) NOT NULL,
@@ -13,7 +15,7 @@ CREATE TABLE profile(
     pfp MEDIUMBLOB,
 
     PRIMARY KEY(profile_ID)
-)
+);
 
 
 

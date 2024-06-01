@@ -74,7 +74,7 @@ function check_pfp(){
     if(pfp == ""){
         prompt.innerHTML = "This field must be filled";
     }
-    else if(pfp.match(/.*\.(PNG|JPG|JPEG)$/g)){
+    else if(pfp.match(/.*\.(PNG|JPG|JPEG|png|jpg|jpeg)$/g)){
         hide_element(prompt.id);
         highlight_field("pfp", true);
         return true;

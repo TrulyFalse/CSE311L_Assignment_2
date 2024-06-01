@@ -80,16 +80,6 @@ input.success, select.success{
     border-width: 3px;
 }
 
-input.disabled_button{
-    width: 100%;
-    Background-Color: #4c4c4c;
-    Color: #fff;
-    Border-Radius: 3px;
-    padding: 10px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
-
 button.toggled{
     Background-Color: #825911; 
 }

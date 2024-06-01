@@ -50,8 +50,7 @@ function edit_fields(){
         document.getElementById("dob").setAttribute("disabled", "");
         document.getElementById("email").setAttribute("disabled", "");
 
-        document.getElementById("submit_btn").setAttribute("disabled", "");
-        document.getElementById("submit_btn").setAttribute("class", "disabled_button");
+        document.getElementById("submit_btn").setAttribute("hidden", "");
 
         document.getElementById("edit_btn").innerHTML = "Enable Edit";
         document.getElementById("edit_btn").removeAttribute("class");
@@ -63,8 +62,7 @@ function edit_fields(){
         document.getElementById("dob").removeAttribute("disabled");
         document.getElementById("email").removeAttribute("disabled");
 
-        document.getElementById("submit_btn").removeAttribute("disabled");
-        document.getElementById("submit_btn").setAttribute("class", "button");
+        document.getElementById("submit_btn").removeAttribute("hidden");
 
         document.getElementById("edit_btn").setAttribute("class", "toggled");
         document.getElementById("edit_btn").innerHTML = "Disable Edit";
@@ -164,7 +162,7 @@ function check_pfp(){
     if(pfp == ""){
         prompt.innerHTML = "This field must be filled";
     }
-    else if(pfp.match(/.*\.(PNG|JPG|JPEG)$/g)){
+    else if(pfp.match(/.*\.(PNG|JPG|JPEG|png|jpg|jpeg)$/g)){
         hide_element(prompt.id);
         highlight_field("pfp", true);
         return true;

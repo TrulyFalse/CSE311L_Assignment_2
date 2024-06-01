@@ -7,42 +7,42 @@ Creating a full-fledged CRUD (Create, Read, Update, Delete) REST API using Expre
 3. The canvas .zip file contains the node_modules folder but the github repository doesn't. So to install all dependencies from the package.json file, just type "npm install" while in the "back" subfolder directory.
 
 # Structure
-The project is built using :
-Database:              MySQL
-Backend Framework:     Express JS
-Frontend Library:      [none]
-Backend Runtime Env.:  Node.JS
+The project is built using :<br>
+Database:              MySQL<br>
+Backend Framework:     Express JS<br>
+Frontend Library:      [none]<br>
+Backend Runtime Env.:  Node.JS<br>
 
 # API documentation
-Registration (POST /api/register): Endpoint to create a new user.
-Query sent to DB:
-INSERT into profile (first_name, last_name, gender, dob, email, password, pfp)
-VALUES ('${profile.first_name}', '${profile.last_name}', '${profile.gender}', '${profile.dob}', '${profile.email}', '${profile.password}', '${profile.pfp}');
+Registration (POST /api/register): Endpoint to create a new user.<br>
+Query sent to DB:<br>
+INSERT into profile (first_name, last_name, gender, dob, email, password, pfp)<br>
+VALUES ('${profile.first_name}', '${profile.last_name}', '${profile.gender}', '${profile.dob}', '${profile.email}', '${profile.password}', '${profile.pfp}');<br>
 
-Login (POST /api/login): Endpoint to authenticate users.
-Query sent to DB:
-SELECT *
-FROM profile p
-WHERE p.email = "${login.email}" AND p.password = "${login.password}";
+Login (POST /api/login): Endpoint to authenticate users.<br>
+Query sent to DB:<br>
+SELECT *<br>
+FROM profile p<br>
+WHERE p.email = "${login.email}" AND p.password = "${login.password}";<br>
 
-Get Profile (GET /api/profile): Endpoint to retrieve the logged-in user's profile information
-Query sent to DB:
-SELECT p.first_name, p.last_name, p.gender, p.dob, p.email
-FROM profile p
-WHERE p.email = "${email}"
+Get Profile (GET /api/profile): Endpoint to retrieve the logged-in user's profile information<br>
+Query sent to DB:<br>
+SELECT p.first_name, p.last_name, p.gender, p.dob, p.email<br>
+FROM profile p<br>
+WHERE p.email = "${email}"<br>
 
-Update Profile (PUT /api/profile): Endpoint to update the user's profile information
-Query sent to DB:
-UPDATE profile
-SET first_name = '${profile.first_name}', 
-last_name = '${profile.last_name}', 
-gender = '${profile.gender}', 
-dob = '${profile.dob}', 
-email = '${profile.email}', 
-pfp = '${profile.pfp}'
-WHERE email = '${profile.old_email}';
+Update Profile (PUT /api/profile): Endpoint to update the user's profile information<br>
+Query sent to DB:<br>
+UPDATE profile<br>
+SET first_name = '${profile.first_name}', <br>
+last_name = '${profile.last_name}', <br>
+gender = '${profile.gender}', <br>
+dob = '${profile.dob}', <br>
+email = '${profile.email}', <br>
+pfp = '${profile.pfp}'<br>
+WHERE email = '${profile.old_email}';<br>
 
-Delete Account (DELETE /api/profile): Endpoint to delete the logged-in user's account
-Query sent to DB:
-DELETE FROM profile
-WHERE email = '${req.body.email}';
+Delete Account (DELETE /api/profile): Endpoint to delete the logged-in user's account<br>
+Query sent to DB:<br>
+DELETE FROM profile<br>
+WHERE email = '${req.body.email}';<br>

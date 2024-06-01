@@ -1,19 +1,19 @@
 # CSE311L_Assignment_2
 Creating a full-fledged CRUD (Create, Read, Update, Delete) REST API using Express.js and a dynamic profile page in the frontend.
 
-#Setup
+# Setup
 1. Copy the code from db_create.sql and run it on XAMPP's MySQL admin page.
 2. Start the server by running app.js using the terminal. Type in the terminal while in the file's directory: "node app.js"
 3. The canvas .zip file contains the node_modules folder but the github repository doesn't. So to install all dependencies from the package.json file, just type "npm install" while in the "back" subfolder directory.
 
-#Structure
+# Structure
 The project is built using -
 Database:              MySQL
 Backend Framework:     Express JS
 Frontend Library:      [none]
 Backend Runtime Env.:  Node.JS
 
-#API documentation
+# API documentation
 Registration (POST /api/register): Endpoint to create a new user.
 Query sent to DB:
 INSERT into profile (first_name, last_name, gender, dob, email, password, pfp)

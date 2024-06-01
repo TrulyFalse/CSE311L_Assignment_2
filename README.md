@@ -7,7 +7,7 @@ Creating a full-fledged CRUD (Create, Read, Update, Delete) REST API using Expre
 3. The canvas .zip file contains the node_modules folder but the github repository doesn't. So to install all dependencies from the package.json file, just type "npm install" while in the "back" subfolder directory.
 
 # Structure
-The project is built using -
+The project is built using :
 Database:              MySQL
 Backend Framework:     Express JS
 Frontend Library:      [none]
